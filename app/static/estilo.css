@@ -1,0 +1,209 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F2F2F2;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 28px;
+}
+
+.cabecalho{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 10px;
+    border-bottom: solid 1px rgba(38, 61, 54, 0.3);
+    background-color: #ebeff1;
+
+}
+
+.menu{
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.link-cabecalho{
+    color: #263d36;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.link-cabecalho :hover{
+    color: #04C4D9;
+}
+
+.cabecalho-logo{
+    width: 100px;
+    height: 80px;
+    margin-right: 5%;
+    margin-left: 5%;
+    border-radius: 5px;
+}
+
+
+.secao-clima{
+    text-align: center;
+    background-color: #04C4D9;
+    padding: 15px;
+    border-radius: 25px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-right: 2%;
+    margin-left: 2%;
+}
+.infos-da-cidade-principal{
+    background-color: #f9f9f9;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    display: inline-flex;
+    width: 100%;
+}
+
+.mapa-e-selecao-de-estado{
+    width: 75%;
+}
+.info-cidade-selecionada{
+    border-left: 1px solid rgba(38, 61, 64, 0.5);
+    background-color: #f9f9f9;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 35%;
+    height: auto; 
+    padding-left: 10px;
+}
+
+.divBuscaCidade{
+    background-color:#F2F2F2;
+    border:solid 1px rgba(38, 61, 64, 0.5);
+    border-radius:10px;
+    width:100%;
+    height:32px;
+    display: inline-flex;
+    margin-bottom: 0%;
+}
+.inputBuscaCidade{
+    float:left;
+    background-color:transparent;
+    padding-left:5px;
+    font-size:18px;
+    border:none;
+    height:32px;
+    width:80%;
+}
+
+.inputBuscaCidade:focus{
+    float:left;
+    background-color:transparent;
+    padding-left:5px;
+    font-size:18px;
+    border:none;
+    height:32px;
+    width:80%;
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
+
+.btn-buscar-cidade{
+    position: flex;
+    border:none;
+    margin-right: 0%;
+    height:32px;
+    border-radius:0 7px 7px 0;
+    width:20%;
+    font-weight:bold;
+    background: rgba(38, 61, 64, 0.5);
+    color: #F2F2F2;
+}
+
+.info-cidade-selecionada{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: stretch;
+    padding: 10px;
+}
+
+.tabela-itens{
+    flex: 1 1 100px;  
+    flex-direction: column;
+    background-color: #f1f1f1;
+    padding: 10px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 8px;
+    border: solid 1px #263d36;
+    box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.2) ;
+    
+}
+
+.tabela-itens-titulo{
+    font-size: 18px;
+    color: rgba(38, 61, 54, 0.5);
+}
+
+.tabela-itens-conteudo{
+    border-top: solid 1px rgba(38, 61, 54, 0.3);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-top: -20px;
+    margin-bottom: 20px;
+    
+}
+.disclaimer{
+    color: rgba(38, 61, 54, 0.5);
+    background-color: #f9f9f9;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    align-content: center;
+    width: 100%
+}
+
+.secao-monologo{
+    background-color: #ebeff1;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.titulo-monologo{
+    display: inline-block;
+    color: #04C4D9;
+    border-bottom: solid 1px rgba(38, 61, 54, 0.3);
+    font-size: 30px;
+}
+
+.paragrafo-monologo{
+    color: #172521;
+    padding-left: 3%;
+    padding-right: 3%;
+    font-size: 20px;
+}
+.rodape{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 10px;
+    border-top: solid 1px rgba(38, 61, 54, 0.5);
+
+}
+
+.rodape-logo{
+    width: 100px;
+    height: 80px;
+    margin-right: 5%;
+    margin-left: 5%;
+    border-radius: 5px;
+}
+

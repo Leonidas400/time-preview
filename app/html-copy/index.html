@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Previsão do Tempo</title>
+     <link rel="stylesheet" href="{{ url_for('static', filename='estilo.css') }}">
+</head>
+<body>
+    
+    <header class="cabecalho">
+        <img src="{{ url_for('static', filename='imagens/docker.webp') }}" alt="" class="cabecalho-logo">
+        <nav class="menu">
+            <a href="#api" class="link-cabecalho"> Início </a>
+            <a href="#sobre" class="link-cabecalho"> Sobre</a>
+            <a href="#funciona" class="link-cabecalho"> Como Funciona</a>
+            <a href="#desenvolvimento" class="link-cabecalho"> Desenvolvimento</a>
+
+        </nav>
+        <img src="{{ url_for('static', filename='imagens/openweather.png') }}" alt="" class="cabecalho-logo">
+    </header>
+
+    <section class="secao-clima" id="api">
+        <h1>Clima em {{ dados.cidade }}</h1>
+        <div class="infos-da-cidade-principal">
+            <span class="mapa-e-selecao-de-estado">
+                <span class="selecao-de-estados">
+                    <form method="POST">
+                        <div id="divBuscaCidade" class="divBuscaCidade">
+                            <img src="" alt="">
+                            <input id="inputBuscaCidade" class="inputBuscaCidade" name="cidade" type="text" placeholder="Pesquisar Cidade">
+                            <button id="btn-buscar-cidade" class="btn-buscar-cidade" type="submit">
+                            pesquisar
+                            </button>
+                        </div>
+                    </form>
+                </span>
+
+                
+                <iframe src="https://www.google.com/maps?q={{ dados.lat }},{{ dados.lon }}&hl=pt-BR&z=12&output=embed"
+                    width="100%" height="450" style="border:0; border-bottom-left-radius: 10px;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </span>
+
+            
+            <span class="info-cidade-selecionada">
+                <span class="tabela-itens">
+                    <p class="tabela-itens-titulo"> cidade </p>
+                    <span class="tabela-itens-conteudo">
+                        <img src="{{ url_for('static', filename='imagens/local.png') }}" width="44px" height="55px" alt="">
+                        <p>{{ dados.cidade }}</p>
+                    </span>
+                </span>
+                <span class="tabela-itens">
+                    <p class="tabela-itens-titulo"> Temperatura Atual </p>
+                    <span class="tabela-itens-conteudo">
+                        <img src="{{ url_for('static', filename='imagens/temperatura.png') }}" width="44px" height="55px" alt="">
+                        <p>{{ dados.temperatura }} ºC</p>
+                    </span>
+                </span>
+                <span class="tabela-itens">
+                    <p class="tabela-itens-titulo"> Sensação Térmica </p>
+                    <span class="tabela-itens-conteudo">
+                        <img src="{{ url_for('static', filename='imagens/sensacao-termica.png') }}" width="44px" height="55px" alt="">
+                        <p>{{ dados.sensacao_termica }} ºC</p>
+                    </span>
+                </span>
+                <span class="tabela-itens">
+                    <p class="tabela-itens-titulo"> Condição </p>
+                    <span class="tabela-itens-conteudo">
+                        <img src="{{ url_for('static', filename='imagens/clima.png') }}" width="44px" height="55px" alt="">
+                        <p>{{ dados.descricao }}</p>
+                    </span>
+                </span>
+                <span class="tabela-itens">
+                    <p class="tabela-itens-titulo"> Umidade </p>
+                    <span class="tabela-itens-conteudo">
+                        <img src="{{ url_for('static', filename='imagens/umidade.png') }}" width="44px" height="55px" alt="">
+                        <p>{{ dados.umidade }} %</p>
+                    </span>
+                </span>
+                <span class="tabela-itens">
+                    <p class="tabela-itens-titulo"> Velocidade Vento </p>
+                    <span class="tabela-itens-conteudo">
+                        <img src="{{ url_for('static', filename='imagens/velocidade-vento.png') }}" width="44px" height="55px" alt="">
+                        <p>{{ dados.velocidade_vento }} km/h</p>
+                    </span>
+                </span>
+                <span class="tabela-itens">
+                    <p class="tabela-itens-titulo"> Máxima</p>
+                    <span class="tabela-itens-conteudo">
+                        <img src="{{ url_for('static', filename='imagens/temperatura-maxima.png') }}" width="44px" height="55px" alt="">
+                        <p>{{ dados.temp_maxima }} ºC</p>
+                    </span>
+                </span>
+                <span class="tabela-itens">
+                    <p class="tabela-itens-titulo"> Mínima </p>
+                    <span class="tabela-itens-conteudo">
+                        <img src="{{ url_for('static', filename='imagens/temperatura-minima.png') }}" width="44px" height="55px" alt="">
+                        <p>{{ dados.temp_minima }} ºC</p>
+                    </span>
+                </span>
+                
+            </span>
+            
+        </div>
+        <div class="disclaimer">
+            <p>este é um projeto feito de estudantes para estudantes</p>    
+        </div>
+        
+    </section>
+    <section class="secao-monologo">
+        <h2 class="titulo-monologo" id="sobre">
+            Sobre o Projeto
+        </h2>
+        <p class="paragrafo-monologo">
+            Este projeto tem como objetivo oferecer uma aplicação web simples e eficiente para consultar a previsão do tempo de cidades brasileiras em tempo real.
+            A interface é intuitiva, permitindo ao usuário buscar uma cidade e visualizar informações como temperatura atual, sensação térmica, umidade, condição climática,
+            velocidade do vento e as temperaturas mínima e máxima. Todas as informações são organizadas de forma visualmente agradável para facilitar a compreensão rápida do clima local.
+        </p>
+        <p class="paragrafo-monologo">
+            O sistema foi pensado para ser leve, acessível e fácil de executar em diferentes ambientes. Com o uso de tecnologias modernas como contêineres Docker,
+            a aplicação pode ser executada com facilidade em qualquer máquina que suporte essa tecnologia, sem necessidade de configurar dependências manualmente.
+            Essa abordagem garante portabilidade, reprodutibilidade e praticidade para estudantes, desenvolvedores e qualquer pessoa que deseje uma forma rápida e confiável de consultar o clima.
+        </p>
+        <h2 class="titulo-monologo">
+            Como Utilizar
+        </h2>
+        <p class="paragrafo-monologo">
+            Para utilizar a aplicação, o usuário deve digitar o nome da cidade desejada no campo de busca localizado na parte superior da interface e clicar no botão "Pesquisar".
+            Imediatamente, os dados climáticos da cidade informada serão apresentados, acompanhados de um mapa da região.
+            As informações são exibidas em blocos organizados, com ícones ilustrativos que ajudam na leitura e compreensão dos dados.
+        </p>
+        <h2 class="titulo-monologo" id="funciona">
+            Como Funciona
+        </h2>
+        <p class="paragrafo-monologo">
+            A aplicação se conecta à API pública do OpenWeatherMap, que fornece dados meteorológicos atualizados. Ao receber o nome da cidade informado pelo usuário,
+            o backend realiza uma requisição para a API, processa os dados e os envia ao front-end, onde são exibidos com o uso de HTML e CSS.
+            Um mapa da cidade, com base nas coordenadas geográficas fornecidas pela própria API, também é incorporado à interface para complementar a experiência visual e geográfica do usuário.
+        </p>
+        <h2 class="titulo-monologo" id="desenvolvimento">
+            Como Foi Desenvolvido
+        </h2>
+        <p class="paragrafo-monologo">
+           
+        A aplicação foi desenvolvida utilizando a linguagem Python com o framework Flask para estruturar o backend.
+        No entanto, o principal foco técnico do projeto está na sua containerização com Docker.
+        Toda a aplicação foi empacotada em um container Docker, permitindo que ela seja executada de maneira padronizada e independente do sistema operacional do host.
+        </p>
+        <p class="paragrafo-monologo">
+            A imagem Docker criada inclui todas as dependências da aplicação, como o Flask, o Requests e o interpretador Python 3.12.
+            Com isso, o processo de execução do projeto torna-se extremamente simples e confiável: basta construir a imagem e executá-la com um único comando.
+            O uso de Dockerfiles permite que qualquer desenvolvedor ou usuário replique o ambiente da aplicação sem complicações,
+            eliminando problemas com versões de bibliotecas, conflitos de ambiente ou configurações específicas da máquina.
+        </p>
+        <p class="paragrafo-monologo">
+            Além disso, o mapeamento de portas entre o container e o host garante que a aplicação esteja acessível pela interface web localmente.
+    Esse processo mostra na prática como o Docker pode ser utilizado para facilitar a entrega, teste e implantação de aplicações em ambientes reais ou simulados.
+        </p>
+    </section>
+    <footer class="rodape">
+        <img src="{{ url_for('static', filename='imagens/docker.webp') }}" alt="" class="rodape-logo">
+        <p class="texto-rodape">© 2025 — Desenvolvido por Leônidas, Ian e Matheus</p>
+        <img src="{{ url_for('static', filename='imagens/openweather.png') }}" alt="" class="rodape-logo">
+
+    </footer>
+</body>
+</html>
