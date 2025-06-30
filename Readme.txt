@@ -25,3 +25,6 @@ pip install flask requests pytest
 para rodar a aplicação com Docker você deve mapear as portas do container com as portas da sua máquina como no exemplo abaixo:
 
 docker container run -p 8080:5000 time-preview
+
+**link da imagem docker:
+https://hub.docker.com/r/leonidas400/time-preview
