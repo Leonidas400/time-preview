@@ -1,10 +1,6 @@
-
-"""
 from flask import Flask, render_template, request
 
-
 app = Flask(__name__, template_folder='../html-copy')
-
 
 class MockClimaAPI:
     def obter_clima(self, cidade):
@@ -43,8 +39,8 @@ def home():
                     "temperatura": f"{resposta['actual_temp']}",
                     "sensacao_termica": f"{resposta['feels_like']}",
                     "descricao": resposta["description"],
-                    "umidade": f"{resposta["humidity"]}",
-                    "velocidade_vento": f"{resposta["wind_speed"]}",
+                    "umidade": f"{resposta['humidity']}",
+                    "velocidade_vento": f"{resposta['wind_speed']}",
                     "temp_minima": f"{resposta['temp_min']}",
                     "temp_maxima": f"{resposta['temp_max']}",
                     "lat": resposta["lat"],
@@ -60,5 +56,4 @@ def home():
     return render_template("index.html", dados=dados)
 
 #if __name__ == "__main__":
-#   app.run(debug=True)
-"""
+ #  app.run(debug=True)

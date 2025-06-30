@@ -4,7 +4,7 @@ from clima_api import ClimaAPI
 class TestObterClimaIntegracao(unittest.TestCase):
 
     def test_obter_clima_api_real(self):
-        api_key = "sua_api_key_real_aqui"
+        api_key = "d548cc1e53515004d6b4f2b22e0b338c"
         url = "https://api.openweathermap.org/data/2.5/weather"
         cidade = "São Paulo"
 

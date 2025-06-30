@@ -1,6 +1,3 @@
-"""
-
-"""
 from clima_api import ClimaAPI
 import unittest
 from unittest import patch, Mock
