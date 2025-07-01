@@ -7,8 +7,11 @@ WORKDIR /app
 COPY . .
 #copiando todo o conteúdo da pasta app
 
-RUN pip install --no-cache-dir requests flask pytest
+RUN pip install --no-cache-dir -r requirements.txt
 #comandos para instalar as dependencias necessárias
+
+RUN pytest -v --maxfail=1 --disable-warnings
+#roda o pytest durante o build da imagem
 
 EXPOSE 5000
 #expondo a porta 5000 do container para mapeamento e definição de uma porta definida

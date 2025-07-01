@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 
-app = Flask(__name__, template_folder='../html-copy')
+app = Flask(__name__, template_folder='../html-copy', static_folder='../static')
 
 class MockClimaAPI:
     def obter_clima(self, cidade):
@@ -53,7 +53,10 @@ def home():
                     "descricao": "Cidade não encontrada"
                 }
 
+                
+        
     return render_template("index.html", dados=dados)
+    
 
-#if __name__ == "__main__":
-#  app.run(debug=True)
+if __name__ == "__main__":
+  app.run(debug=True)

@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 from clima_api import ClimaAPI
+from capitais_app import obter_info_capitais
 
 app = Flask(__name__, template_folder='html-copy')
 
@@ -40,5 +41,6 @@ def home():
                     "temperatura": "N/A",
                     "descricao": "Cidade não encontrada"
                 }
+    capitais_info = obter_info_capitais(api)
 
-    return render_template("index.html", dados=dados)
+    return render_template("index.html", dados=dados, capitais=capitais_info)

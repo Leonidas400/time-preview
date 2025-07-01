@@ -104,6 +104,23 @@
             
         </div>
         <div class="disclaimer">
+            <h3>Temperatura em algumas capitais brasileiras neste momento</h3>
+            <div class="info-capitais">
+                {% for capital in capitais %}
+                    <span class="tabela-info-capitais">
+                        <span class="tabela-capitais">
+                            <img src="{{ url_for('static', filename='imagens/local.png') }}" width="24px" height="35px" alt="">
+                            <p class="tabela-capital-nome">{{ capital.cidade }}</p>
+                        </span>
+                        <span class="tabela-capitais">
+                            <img src="{{ url_for('static', filename='imagens/temperatura.png') }}" width="34px" height="45px" alt="">
+                            <p class="tabela-capital-temperatura">{{ capital.temperatura }} ºC</p>
+                        </span>
+                    </span>
+                {% endfor %}
+                </div>
+            
+
             <p>este é um projeto feito de estudantes para estudantes</p>    
         </div>
         
