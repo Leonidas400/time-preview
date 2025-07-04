@@ -12,7 +12,7 @@ COPY . .
 RUN pip install --no-cache-dir -r requirements.txt
 #comando para instalar as dependencias necessárias listadas no arquivo requirements.txt 
 
-RUN pytest -v --maxfail=1 --disable-warnings
+RUN pytest -s -v --maxfail=1 --disable-warnings
 #roda os testes do pytest durante o build da imagem e mostra os detalhes
 #caso tenha algum erro interrompe o build da imagem
 #oculta avisos também
