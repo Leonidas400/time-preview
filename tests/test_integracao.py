@@ -1,5 +1,5 @@
 import unittest
-from clima_api import ClimaAPI
+from app.clima_api import ClimaAPI
 
 class TestObterClimaIntegracao(unittest.TestCase):
 

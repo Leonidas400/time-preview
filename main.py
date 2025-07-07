@@ -1,5 +1,5 @@
-from clima_api import ClimaAPI
-from app import app
+from app.clima_api import ClimaAPI
+from app.app import app
 
 if __name__ == "__main__":
     """

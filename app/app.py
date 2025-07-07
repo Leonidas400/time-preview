@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
-from clima_api import ClimaAPI
-from capitais_app import obter_info_capitais
+from app.clima_api import ClimaAPI
+from app.capitais_app import obter_info_capitais
 
 app = Flask(__name__, template_folder='html-copy')
 

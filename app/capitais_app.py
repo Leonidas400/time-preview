@@ -1,4 +1,4 @@
-from clima_api import ClimaAPI
+from app.clima_api import ClimaAPI
 import random
 
 CAPITAIS = ["Rio Branco", "Macapá", "Manaus", "Belém", "Porto Velho", "Boa Vista", "Palmas",

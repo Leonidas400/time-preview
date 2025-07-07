@@ -1,5 +1,5 @@
 
-from clima_api import ClimaAPI
+from app.clima_api import ClimaAPI
 import unittest
 from unittest.mock import patch, Mock
 
