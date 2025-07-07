@@ -44,3 +44,4 @@ def home():
     capitais_info = obter_info_capitais(api)
 
     return render_template("index.html", dados=dados, capitais=capitais_info)
+
