@@ -1,4 +1,4 @@
-FROM python:3.12.1 As estagio-de-teste
+FROM python:3.12.1 AS estagio-de-teste
 #falando para o docker usar uma imagem pronta que já vem com o python na versão 3.12.1
 #nomeando esse estágio da construção da imagem
 
@@ -17,7 +17,7 @@ RUN pytest -s -v --maxfail=1 --disable-warnings
 #caso tenha algum erro interrompe o build da imagem
 #oculta avisos também
 
-FROM python:3.12.1 As estagio-de-execucao
+FROM python:3.12.1 AS estagio-de-execucao
 
 WORKDIR /app 
 
