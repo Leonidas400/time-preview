@@ -17,7 +17,7 @@ RUN pytest -s -v --maxfail=1 --disable-warnings
 #caso tenha algum erro interrompe o build da imagem
 #oculta avisos também
 
-FROM python:3.12.1 AS estagio-de-execucao
+FROM python:3.12.1 AS estagio-de-execucao 
 
 WORKDIR /app 
 
